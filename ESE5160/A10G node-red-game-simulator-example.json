@@ -1,0 +1,1722 @@
+[
+    {
+        "id": "14e86f6955a197ae",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "18c13f2a72cfabdb",
+        "type": "tab",
+        "label": "2 player game simulation",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8228e3077ac0703d",
+        "type": "tab",
+        "label": "Simulation Game Board",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8fde701c.6c6c3",
+        "type": "mqtt-broker",
+        "name": "AzureMqttBroker",
+        "broker": "516.00.516.516",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3dd7f020.68187",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 4,
+                "gy": 4,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c19ddfcf.06e82",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7439f979.e3ee18",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "c19ddfcf.06e82",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4c314b97.169624",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "d7d463f4.cae2c",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "81488ffe2436a743",
+        "type": "ui_group",
+        "name": "2 Player Game Simulation",
+        "tab": "ced444794130f2b6",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "ced444794130f2b6",
+        "type": "ui_tab",
+        "name": "2 Player Simulation",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c3a02e4b5d9ecf3d",
+        "type": "ui_tab",
+        "name": "One Player Game",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "eefa1c5385cf1044",
+        "type": "ui_group",
+        "name": "Color",
+        "tab": "c3a02e4b5d9ecf3d",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "f9cdd44a30ae732b",
+        "type": "ui_group",
+        "name": "P1 LED Board",
+        "tab": "ced444794130f2b6",
+        "order": 2,
+        "disp": true,
+        "width": "4",
+        "collapse": false
+    },
+    {
+        "id": "dd65883073a9f903",
+        "type": "function",
+        "z": "14e86f6955a197ae",
+        "name": "temp",
+        "func": "return {payload:msg.payload.d.temp};",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 480,
+        "wires": [
+            [
+                "39c2f8bda792b9f6"
+            ]
+        ]
+    },
+    {
+        "id": "39c2f8bda792b9f6",
+        "type": "switch",
+        "z": "14e86f6955a197ae",
+        "name": "temp thresh",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "40",
+                "vt": "str"
+            },
+            {
+                "t": "gt",
+                "v": "40",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 550,
+        "y": 480,
+        "wires": [
+            [
+                "2a8599540d05c1f4"
+            ],
+            [
+                "c0dc93cb7e83fea5"
+            ]
+        ]
+    },
+    {
+        "id": "59ddcdeba1637de9",
+        "type": "debug",
+        "z": "14e86f6955a197ae",
+        "name": "cpu status",
+        "active": false,
+        "complete": "false",
+        "x": 890,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "68b45eb2662d6399",
+        "type": "debug",
+        "z": "14e86f6955a197ae",
+        "name": "device data",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 410,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "2a8599540d05c1f4",
+        "type": "template",
+        "z": "14e86f6955a197ae",
+        "name": "safe",
+        "field": "payload",
+        "fieldType": "msg",
+        "syntax": "mustache",
+        "template": "Temperature ({{payload}}) within safe limits",
+        "x": 710,
+        "y": 460,
+        "wires": [
+            [
+                "59ddcdeba1637de9",
+                "adfb4e36fbc805db"
+            ]
+        ]
+    },
+    {
+        "id": "c0dc93cb7e83fea5",
+        "type": "template",
+        "z": "14e86f6955a197ae",
+        "name": "danger",
+        "template": "Temperature ({{payload}}) critical",
+        "x": 720,
+        "y": 500,
+        "wires": [
+            [
+                "59ddcdeba1637de9"
+            ]
+        ]
+    },
+    {
+        "id": "2ca4808c446af4b6",
+        "type": "inject",
+        "z": "14e86f6955a197ae",
+        "name": "Send Data",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "1659cdea13069749"
+            ]
+        ]
+    },
+    {
+        "id": "1659cdea13069749",
+        "type": "function",
+        "z": "14e86f6955a197ae",
+        "name": "Device payload",
+        "func": "// Thermostat's location:\nvar longitude1 = -98.49;\nvar latitude1 = 29.42;\n\n// Array of pseudo random temperatures\nvar temp1 = [15,17,18.5,20,21.5,23,24,22.2,19,18];\n\n// Array of pseudo random relative humidities\nvar humidity1 = [50,55,61,68,65,60,53,49,45,47];\n\n// Counter to select from array.\nvar counter1 = context.get('counter1')||0;\ncounter1 = counter1+1;\nif(counter1 > 9) counter1 = 0;\ncontext.set('counter1',counter1);\n\n// Create MQTT message in JSON\nmsg = {\n  payload: JSON.stringify(\n    {\n      d:{\n        \"temp\" : temp1[counter1],\n        \"humidity\" : humidity1[counter1],\n        \"location\" :\n        {\n          \"longitude\" : longitude1,\n          \"latitude\" : latitude1\n        },\n      }\n    }\n  )\n};\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 340,
+        "y": 140,
+        "wires": [
+            [
+                "58961711528139e3",
+                "9f817338416a8e2f"
+            ]
+        ]
+    },
+    {
+        "id": "58961711528139e3",
+        "type": "debug",
+        "z": "14e86f6955a197ae",
+        "name": "Debug output payload",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 580,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6e434edaa37093b6",
+        "type": "comment",
+        "z": "14e86f6955a197ae",
+        "name": "Device Simulator",
+        "info": "Sends simulated device sensor data to IBM Watson IoT Plaform.\n\nCan be configured to send on click or on an automatic interval.\n\n\n#Prerequisite\nOutput node device type and device ID need to match a device that it registered in a running IBM Watson IoT Platform service.\n\n# Watson IoT Platform docs\n[Connecting devices](https://www.bluemix.net/docs/services/IoT/iotplatform_task.html)",
+        "x": 120,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "555a1a101e53eae6",
+        "type": "comment",
+        "z": "14e86f6955a197ae",
+        "name": "1. Configure target",
+        "info": "",
+        "x": 570,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "d2e4df636a36466c",
+        "type": "comment",
+        "z": "14e86f6955a197ae",
+        "name": "2. Click to send data",
+        "info": "To automatically send data:\n1. Change *Repeat* to interval.\n2. Click Deploy button.\n",
+        "x": 130,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "00b11bd7f46acf2a",
+        "type": "comment",
+        "z": "14e86f6955a197ae",
+        "name": "Temperature Monitor",
+        "info": "",
+        "x": 210,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "cae93bea281c5161",
+        "type": "comment",
+        "z": "14e86f6955a197ae",
+        "name": "Configure source",
+        "info": "",
+        "x": 200,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "3957c5c53ae86f01",
+        "type": "json",
+        "z": "14e86f6955a197ae",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 230,
+        "y": 480,
+        "wires": [
+            [
+                "dd65883073a9f903",
+                "68b45eb2662d6399"
+            ]
+        ]
+    },
+    {
+        "id": "9f817338416a8e2f",
+        "type": "mqtt out",
+        "z": "14e86f6955a197ae",
+        "name": "",
+        "topic": "TempData",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "8fde701c.6c6c3",
+        "x": 790,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "adfb4e36fbc805db",
+        "type": "ui_text",
+        "z": "14e86f6955a197ae",
+        "group": "7439f979.e3ee18",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 910,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "cd506acfcb7e8a6a",
+        "type": "mqtt in",
+        "z": "14e86f6955a197ae",
+        "name": "",
+        "topic": "P1_IMU_ESE516_T0",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "8fde701c.6c6c3",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 210,
+        "y": 720,
+        "wires": [
+            [
+                "ceb9c44938fcec9e"
+            ]
+        ]
+    },
+    {
+        "id": "ceb9c44938fcec9e",
+        "type": "debug",
+        "z": "14e86f6955a197ae",
+        "name": "device data",
+        "active": true,
+        "console": "false",
+        "complete": "true",
+        "x": 490,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "35ce388af8963f61",
+        "type": "mqtt in",
+        "z": "14e86f6955a197ae",
+        "name": "",
+        "topic": "P1_DISTANCE_ESE516_T0",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "8fde701c.6c6c3",
+        "inputs": 0,
+        "x": 220,
+        "y": 780,
+        "wires": [
+            [
+                "82b6cb00b30267d2"
+            ]
+        ]
+    },
+    {
+        "id": "82b6cb00b30267d2",
+        "type": "debug",
+        "z": "14e86f6955a197ae",
+        "name": "device data",
+        "active": true,
+        "console": "false",
+        "complete": "true",
+        "x": 490,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "35c8167367e5bc2a",
+        "type": "function",
+        "z": "18c13f2a72cfabdb",
+        "name": "Add Play",
+        "func": "\nif(msg.payload.game.length <= 20){\n    \n //Concatenate a play\n msg.payload.game.push(Math.round(Math.random()*15))\n    \n}\nelse{\n //Pop out first game in list and add a new one at the end\n msg.payload.game.shift(); // Remove an item from the beginning of an array.\n msg.payload.game.push(Math.round(Math.random()*15))\n}\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 320,
+        "wires": [
+            [
+                "da94e29e948a7c73",
+                "bf52a3b090521252",
+                "e881b7d57cab4d76"
+            ]
+        ]
+    },
+    {
+        "id": "da94e29e948a7c73",
+        "type": "debug",
+        "z": "18c13f2a72cfabdb",
+        "name": "Debug output payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 840,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "09e8d9f7d262ac61",
+        "type": "comment",
+        "z": "18c13f2a72cfabdb",
+        "name": "Device Simulator - Press to Start a New Game",
+        "info": "Sends simulated device sensor data to IBM Watson IoT Plaform.\n\nCan be configured to send on click or on an automatic interval.\n\n\n#Prerequisite\nOutput node device type and device ID need to match a device that it registered in a running IBM Watson IoT Platform service.\n\n# Watson IoT Platform docs\n[Connecting devices](https://www.bluemix.net/docs/services/IoT/iotplatform_task.html)",
+        "x": 270,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "69ded5f2ced5f4a3",
+        "type": "comment",
+        "z": "18c13f2a72cfabdb",
+        "name": "Add move to P1 and send to P2",
+        "info": "",
+        "x": 190,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "03435573339bcb88",
+        "type": "mqtt out",
+        "z": "18c13f2a72cfabdb",
+        "name": "",
+        "topic": "P1_GAME_ESE516_T0",
+        "qos": "1",
+        "retain": "",
+        "broker": "8fde701c.6c6c3",
+        "x": 750,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "d4cff7acfb060637",
+        "type": "inject",
+        "z": "18c13f2a72cfabdb",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"game\":[0]}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 80,
+        "wires": [
+            [
+                "e3860942fdb8b468"
+            ]
+        ]
+    },
+    {
+        "id": "ab042de6a944f3a0",
+        "type": "debug",
+        "z": "18c13f2a72cfabdb",
+        "name": "Debug output payload",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 740,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "adb46de57716c162",
+        "type": "mqtt in",
+        "z": "18c13f2a72cfabdb",
+        "name": "",
+        "topic": "P1_GAME_ESE516_T0",
+        "qos": "1",
+        "datatype": "auto",
+        "broker": "8fde701c.6c6c3",
+        "inputs": 0,
+        "x": 200,
+        "y": 340,
+        "wires": [
+            [
+                "7c42458499a7e5fb",
+                "ba35c836ad1d9911"
+            ]
+        ]
+    },
+    {
+        "id": "7c42458499a7e5fb",
+        "type": "debug",
+        "z": "18c13f2a72cfabdb",
+        "name": "Debug output payload",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 460,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "521cce9963560a9c",
+        "type": "debug",
+        "z": "18c13f2a72cfabdb",
+        "name": "Debug output payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 600,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ba35c836ad1d9911",
+        "type": "json",
+        "z": "18c13f2a72cfabdb",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 410,
+        "y": 320,
+        "wires": [
+            [
+                "35c8167367e5bc2a",
+                "521cce9963560a9c"
+            ]
+        ]
+    },
+    {
+        "id": "bf52a3b090521252",
+        "type": "mqtt out",
+        "z": "18c13f2a72cfabdb",
+        "name": "",
+        "topic": "P2_GAME_ESE516_T0",
+        "qos": "1",
+        "retain": "",
+        "broker": "8fde701c.6c6c3",
+        "x": 870,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "8fa287be37f08107",
+        "type": "mqtt in",
+        "z": "18c13f2a72cfabdb",
+        "name": "",
+        "topic": "P2_GAME_ESE516_T0",
+        "qos": "1",
+        "datatype": "auto",
+        "broker": "8fde701c.6c6c3",
+        "inputs": 0,
+        "x": 200,
+        "y": 600,
+        "wires": [
+            [
+                "f714e778ba6d2c20",
+                "791c9ad5738f3bfc"
+            ]
+        ]
+    },
+    {
+        "id": "16acbca0bcfaa954",
+        "type": "function",
+        "z": "18c13f2a72cfabdb",
+        "name": "Add Play",
+        "func": "\nif(msg.payload.game.length <= 20){\n    \n //Concatenate a play\n msg.payload.game.push(Math.round(Math.random()*15))\n    \n}\nelse{\n //Pop out first game in list and add a new one at the end\n msg.payload.game.shift(); // Remove an item from the beginning of an array.\n msg.payload.game.push(Math.round(Math.random()*15))\n}\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 600,
+        "wires": [
+            [
+                "2616a2519e49e53a",
+                "8ec74656b34eaab0",
+                "df425cf1c4d75f0a"
+            ]
+        ]
+    },
+    {
+        "id": "2616a2519e49e53a",
+        "type": "debug",
+        "z": "18c13f2a72cfabdb",
+        "name": "Debug output payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 820,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "791c9ad5738f3bfc",
+        "type": "debug",
+        "z": "18c13f2a72cfabdb",
+        "name": "Debug output payload",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 380,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "de04750dc41665c2",
+        "type": "debug",
+        "z": "18c13f2a72cfabdb",
+        "name": "Debug output payload",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 540,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "f714e778ba6d2c20",
+        "type": "json",
+        "z": "18c13f2a72cfabdb",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 430,
+        "y": 600,
+        "wires": [
+            [
+                "16acbca0bcfaa954",
+                "de04750dc41665c2"
+            ]
+        ]
+    },
+    {
+        "id": "b5a5a3b11483d5ca",
+        "type": "mqtt out",
+        "z": "18c13f2a72cfabdb",
+        "name": "",
+        "topic": "P1_GAME_ESE516_T0",
+        "qos": "1",
+        "retain": "",
+        "broker": "8fde701c.6c6c3",
+        "x": 570,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "51015c6399bc3f08",
+        "type": "ui_button",
+        "z": "18c13f2a72cfabdb",
+        "name": "",
+        "group": "81488ffe2436a743",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Simulate Turn",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 140,
+        "y": 913,
+        "wires": [
+            [
+                "0b67d0ae833815d2"
+            ]
+        ]
+    },
+    {
+        "id": "8ec74656b34eaab0",
+        "type": "change",
+        "z": "18c13f2a72cfabdb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "message1",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 840,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0b67d0ae833815d2",
+        "type": "change",
+        "z": "18c13f2a72cfabdb",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "message1",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 893,
+        "wires": [
+            [
+                "b5a5a3b11483d5ca"
+            ]
+        ]
+    },
+    {
+        "id": "b3ce0793960b6b49",
+        "type": "comment",
+        "z": "18c13f2a72cfabdb",
+        "name": "Add move to P2 and send to P1 when BUTTON is press",
+        "info": "",
+        "x": 240,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "c508050cce49b4cd",
+        "type": "comment",
+        "z": "18c13f2a72cfabdb",
+        "name": "Simulate Turn",
+        "info": "",
+        "x": 110,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "e881b7d57cab4d76",
+        "type": "ui_text",
+        "z": "18c13f2a72cfabdb",
+        "group": "81488ffe2436a743",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "P1 Move",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 850,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "df425cf1c4d75f0a",
+        "type": "ui_text",
+        "z": "18c13f2a72cfabdb",
+        "group": "81488ffe2436a743",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "P2 Move",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 820,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "e3860942fdb8b468",
+        "type": "ui_button",
+        "z": "18c13f2a72cfabdb",
+        "name": "",
+        "group": "81488ffe2436a743",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Initialize Game",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "{\"game\":[0]}",
+        "payloadType": "str",
+        "topic": "",
+        "x": 440,
+        "y": 80,
+        "wires": [
+            [
+                "03435573339bcb88",
+                "ab042de6a944f3a0"
+            ]
+        ]
+    },
+    {
+        "id": "71552b060c0dddb5",
+        "type": "comment",
+        "z": "8228e3077ac0703d",
+        "name": "Animate Play",
+        "info": "",
+        "x": 90,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "484ee39211e25d43",
+        "type": "debug",
+        "z": "8228e3077ac0703d",
+        "name": "Debug output payload",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 560,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ac25727ecab61c8a",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led1",
+        "x": 1270,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "64fcf772c704558f",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led2",
+        "x": 1270,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8bd9e032c28a2e09",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led3",
+        "x": 1270,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "2d24a9cb0781a756",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led4",
+        "x": 1270,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f99fb6e87964c765",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led5",
+        "x": 1270,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b4ad13c12ae97c60",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led6",
+        "x": 1270,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "c46971366a7a08a8",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led7",
+        "x": 1270,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "59dec3585f112236",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led8",
+        "x": 1270,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a7d75d0ab21e1dd7",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led9",
+        "x": 1270,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "8fc463c97fa5b28d",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led10",
+        "x": 1270,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "e7f2447505367225",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led11",
+        "x": 1270,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a72f975a98b0013d",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led12",
+        "x": 1270,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "3728a21fea977b0e",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led13",
+        "x": 1270,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "1f04bb98cc250809",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led14",
+        "x": 1270,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "402cfa201a16216c",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led15",
+        "x": 1270,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "0c4aaf7a4ab0a376",
+        "type": "ui_led",
+        "z": "8228e3077ac0703d",
+        "order": 1,
+        "group": "f9cdd44a30ae732b",
+        "width": "1",
+        "height": "1",
+        "label": "",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Led16",
+        "x": 1270,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "0f71bf3465248cfd",
+        "type": "split",
+        "z": "8228e3077ac0703d",
+        "name": "",
+        "splt": " ",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 490,
+        "y": 220,
+        "wires": [
+            [
+                "7b9c09c828108c1b"
+            ]
+        ]
+    },
+    {
+        "id": "1f25da2c50924473",
+        "type": "delay",
+        "z": "8228e3077ac0703d",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 750,
+        "y": 280,
+        "wires": [
+            [
+                "8c58c6b279a2c5bc",
+                "e709f6a2b3c2efb7"
+            ]
+        ]
+    },
+    {
+        "id": "b1b1d6940b91c762",
+        "type": "mqtt in",
+        "z": "8228e3077ac0703d",
+        "name": "",
+        "topic": "P2_GAME_ESE516_T0",
+        "qos": "1",
+        "datatype": "auto",
+        "broker": "8fde701c.6c6c3",
+        "inputs": 0,
+        "x": 100,
+        "y": 340,
+        "wires": [
+            [
+                "3b60ce4df9d5e794"
+            ]
+        ]
+    },
+    {
+        "id": "8c58c6b279a2c5bc",
+        "type": "debug",
+        "z": "8228e3077ac0703d",
+        "name": "Debug output payload",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 940,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "3b60ce4df9d5e794",
+        "type": "json",
+        "z": "8228e3077ac0703d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 290,
+        "y": 340,
+        "wires": [
+            [
+                "484ee39211e25d43",
+                "870b7a1e03a9eb43"
+            ]
+        ]
+    },
+    {
+        "id": "7b9c09c828108c1b",
+        "type": "split",
+        "z": "8228e3077ac0703d",
+        "name": "",
+        "splt": " ",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "topic",
+        "x": 610,
+        "y": 280,
+        "wires": [
+            [
+                "1f25da2c50924473"
+            ]
+        ]
+    },
+    {
+        "id": "de418e6a8d5c4b50",
+        "type": "debug",
+        "z": "8228e3077ac0703d",
+        "name": "Debug output payload",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 1300,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "e709f6a2b3c2efb7",
+        "type": "function",
+        "z": "8228e3077ac0703d",
+        "name": "",
+        "func": "var on = { payload: true};\nvar off = { payload: false};\n\n\nif(msg.payload === 0)\n{\n  return [on, off, off, off, off, off, off, off, off, off, off, off, off, off, off, off];  \n    \n}\nelse if(msg.payload === 1)\n{\n  return [off, on, off, off, off, off, off, off, off, off, off, off, off, off, off, off];  \n    \n}\nelse if(msg.payload === 2)\n{\n  return [off, off, on, off, off, off, off, off, off, off, off, off, off, off, off, off];  \n    \n}\nelse if(msg.payload === 3)\n{\n  return [off, off, off, on, off, off, off, off, off, off, off, off, off, off, off, off];  \n    \n}\nelse if(msg.payload === 4)\n{\n  return [off, off, off, off, on, off, off, off, off, off, off, off, off, off, off, off];  \n    \n}\nelse if(msg.payload === 5)\n{\n  return [off, off, off, off, off, on, off, off, off, off, off, off, off, off, off, off];  \n    \n}\nelse if(msg.payload === 6)\n{\n  return [off, off, off, off, off, off, on, off, off, off, off, off, off, off, off, off];  \n    \n}\nelse if(msg.payload === 7)\n{\n  return [off, off, off, off, off, off, off, on, off, off, off, off, off, off, off, off];  \n    \n}\nelse if(msg.payload === 8)\n{\n  return [off, off, off, off, off, off, off, off, on, off, off, off, off, off, off, off];  \n    \n}\nelse if(msg.payload === 9)\n{\n  return [off, off, off, off, off, off, off, off, off, on, off, off, off, off, off, off];  \n    \n}\nelse if(msg.payload === 10)\n{\n  return [off, off, off, off, off, off, off, off, off, off, on, off, off, off, off, off];  \n    \n}\nelse if(msg.payload === 11)\n{\n  return [off, off, off, off, off, off, off, off, off, on, off, off, off, off, off, off];  \n    \n}\nelse if(msg.payload === 12)\n{\n  return [off, off, off, off, off, off, off, off, off, off, on, off, off, off, off, off];  \n    \n}\nelse if(msg.payload === 13)\n{\n  return [off, off, off, off, off, off, off, off, off, off, off, on, off, off, off, off];  \n    \n}\nelse if(msg.payload === 14)\n{\n  return [off, off, off, off, off, off, off, off, off, off, off, off, on, off, off, off];  \n    \n}\nelse if(msg.payload === 15)\n{\n  return [off, off, off, off, off, off, off, off, off, off, off, off, off, on, off, off];  \n    \n}\nelse\n{\n  return [off, off, off, off, off, off, off, off, off, off, off, off, off, off, off, off];  \n    \n}\n",
+        "outputs": 16,
+        "noerr": 0,
+        "x": 960,
+        "y": 280,
+        "wires": [
+            [
+                "ac25727ecab61c8a",
+                "de418e6a8d5c4b50"
+            ],
+            [
+                "64fcf772c704558f"
+            ],
+            [
+                "8bd9e032c28a2e09"
+            ],
+            [
+                "2d24a9cb0781a756"
+            ],
+            [
+                "f99fb6e87964c765"
+            ],
+            [
+                "b4ad13c12ae97c60"
+            ],
+            [
+                "c46971366a7a08a8"
+            ],
+            [
+                "59dec3585f112236"
+            ],
+            [
+                "a7d75d0ab21e1dd7"
+            ],
+            [
+                "8fc463c97fa5b28d"
+            ],
+            [
+                "e7f2447505367225"
+            ],
+            [
+                "a72f975a98b0013d"
+            ],
+            [
+                "3728a21fea977b0e"
+            ],
+            [
+                "1f04bb98cc250809"
+            ],
+            [
+                "402cfa201a16216c"
+            ],
+            [
+                "0c4aaf7a4ab0a376"
+            ]
+        ]
+    },
+    {
+        "id": "870b7a1e03a9eb43",
+        "type": "function",
+        "z": "8228e3077ac0703d",
+        "name": "",
+        "func": "msg.payload.game.push(16) //Add 16 at end to turn of system\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [
+                "0f71bf3465248cfd"
+            ]
+        ]
+    },
+    {
+        "id": "5ca5f7d8e1cacac5",
+        "type": "ui_colour_picker",
+        "z": "8228e3077ac0703d",
+        "name": "",
+        "label": "LED Color",
+        "group": "81488ffe2436a743",
+        "format": "rgb",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": false,
+        "showValue": false,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 1,
+        "width": "1",
+        "height": "1",
+        "passthru": true,
+        "topic": "",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "4cc97ed10e6e1c5e",
+                "a119b832d09df856"
+            ]
+        ]
+    },
+    {
+        "id": "4cc97ed10e6e1c5e",
+        "type": "debug",
+        "z": "8228e3077ac0703d",
+        "name": "Debug output payload",
+        "active": true,
+        "console": "false",
+        "complete": "payload",
+        "x": 480,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "a119b832d09df856",
+        "type": "mqtt out",
+        "z": "8228e3077ac0703d",
+        "name": "",
+        "topic": "P1_LED_ESE516_T0",
+        "qos": "1",
+        "retain": "",
+        "broker": "8fde701c.6c6c3",
+        "x": 480,
+        "y": 40,
+        "wires": []
+    }
+]
